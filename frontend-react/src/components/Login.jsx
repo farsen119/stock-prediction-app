@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
 
     const userData = {username,password}
-    console.log('user ata==>',userData)
+    console.log('user data==>',userData)
 
     try{
       const response = await axios.post('http://127.0.0.1:8000/api/v1/token/',userData)
@@ -34,7 +34,7 @@ const Login = () => {
       console.log("login success")
       setisLoggedIn(true)
 
-      navigate('/')
+      navigate('/dashboard')
 
     }catch(error){
       // console.error('invalid credentials')
