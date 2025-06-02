@@ -45,13 +45,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
     'api',
-    "corsheaders",
+    'corsheaders',
     'rest_framework_simplejwt',
     
 ]
 
 MIDDLEWARE = [
-   "corsheaders.middleware.CorsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -150,3 +150,8 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 
 }
+
+# media files confi
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
